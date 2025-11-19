@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Únete a nuestro equipo - Exámenes Médicos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <span class="icon">🏃‍♀️</span>
+            <h1>¡Únete a nuestro equipo!</h1>
+            <p>Recibe las mejores ofertas en ropa deportiva</p>
+        </div>
+
+        <div class="discount-banner">
+            <span class="icon">🎉</span>
+            10% de descuento en tu primera compra!
+        </div>
+
+        <form id="subscriptionForm">
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                <small class="error-message" id="emailError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre">
+            </div>
+
+            <div class="form-group">
+                <label>¿Qué te interesa? (opcional)</label>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="interest" value="calzado-deportivo"> Calzado deportivo
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interest" value="ropa-hombre"> Ropa para hombre
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interest" value="ropa-mujer"> Ropa para mujer
+                    </label>
+                    <label>
+                        <input type="checkbox" name="interest" value="accesorios"> Accesorios
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group consent-group">
+                <label>
+                    <input type="checkbox" id="privacyConsent" name="privacyConsent" required>
+                    Acepto la <a href="#" class="privacy-link">política de privacidad</a> y deseo recibir promociones *
+                </label>
+                <small class="error-message" id="privacyError"></small>
+            </div>
+
+            <button type="submit" class="submit-button">Suscribirme ahora</button>
+        </form>
+        <div id="confirmationMessage" class="confirmation-container hidden">
+            <span class="icon checkmark-icon">✅</span>
+            <h2>¡Suscripción Exitosa!</h2>
+            <p>Gracias por unirte a nuestro equipo. Recibirás en breve un email de bienvenida con tu código de descuento del 10%.</p>
+            <p class="small-text">Revisa tu bandeja de entrada o spam para confirmar tu correo.</p>
+        </div>
+        </form> 
+</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

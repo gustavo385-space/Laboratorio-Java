@@ -1,0 +1,228 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    box-sizing: border-box;
+    border: 8px solid #6a5acd; /* Borde púrpura como en la imagen */
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.form-header .icon {
+    font-size: 3em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.form-header h1 {
+    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.form-header p {
+    color: #666;
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.discount-banner {
+    background-color: #61bb46;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 1.1em;
+}
+
+.discount-banner .icon {
+    font-size: 1.2em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+.form-group input[type="email"],
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input[type="email"]:focus,
+.form-group input[type="text"]:focus {
+    border-color: #6a5acd;
+    outline: none;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #555;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+    accent-color: #6a5acd;
+}
+
+.consent-group label {
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.consent-group input[type="checkbox"] {
+    margin-top: 3px;
+    margin-right: 10px;
+}
+
+.privacy-link {
+    color: #6a5acd;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.privacy-link:hover {
+    text-decoration: underline;
+}
+
+.submit-button {
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #5a4acb;
+    transform: translateY(-2px);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85em;
+    margin-top: 5px;
+    display: none; /* Oculto por defecto, mostrado con JS si hay error */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+        margin: 15px;
+    }
+
+    .form-header h1 {
+        font-size: 1.5em;
+    }
+
+    .discount-banner {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    .form-group label {
+        font-size: 0.9em;
+    }
+
+    .form-group input[type="email"],
+    .form-group input[type="text"],
+    .submit-button {
+        padding: 12px 15px;
+        font-size: 1em;
+    }
+}
+/* Estilos para el mensaje de confirmación */
+.hidden {
+    display: none !important;
+}
+
+.confirmation-container {
+    text-align: center;
+    padding: 30px 10px;
+    border-top: 2px solid #6a5acd; /* Línea de separación */
+}
+
+.confirmation-container h2 {
+    color: #6a5acd;
+    font-size: 1.6em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.confirmation-container p {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.confirmation-container .small-text {
+    font-size: 0.85em;
+    margin-top: 15px;
+    color: #999;
+}
+
+.checkmark-icon {
+    font-size: 3.5em;
+    animation: scaleIn 0.5s ease-out; /* Pequeña animación */
+}
+
+/* Animación simple */
+@keyframes scaleIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
