@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const reviewInterests = document.getElementById('reviewInterests');
     const confirmDataButton = document.getElementById('confirmDataButton');
     const editDataButton = document.getElementById('editDataButton');
+    const backToFormButton = document.getElementById('backToFormButton');
 
     // Mensajes de error
     const emailError = document.getElementById('emailError');
@@ -130,6 +131,16 @@ document.addEventListener('DOMContentLoaded', () => {
     editDataButton.addEventListener('click', () => {
         showForm();
     });
+
+    // 4. Botón de regresar desde la confirmación al formulario principal
+    if (backToFormButton) {
+        backToFormButton.addEventListener('click', () => {
+            showForm();
+            // Llevar al usuario al inicio del formulario y dar foco al email
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            emailInput.focus();
+        });
+    }
 
     // Ocultar mensajes de error al escribir/cambiar (Para mejor UX)
     emailInput.addEventListener('input', () => {
