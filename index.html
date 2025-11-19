@@ -60,12 +60,31 @@
 
             <button type="submit" class="submit-button">Suscribirme ahora</button>
         </form>
-        <div id="confirmationMessage" class="confirmation-container hidden">
-            <span class="icon checkmark-icon">✅</span>
-            <h2>¡Suscripción Exitosa!</h2>
-            <p>Gracias por unirte a nuestro equipo. Recibirás en breve un email de bienvenida con tu código de descuento del 10%.</p>
-            <p class="small-text">Revisa tu bandeja de entrada o spam para confirmar tu correo.</p>
+        <div id="reviewStep" class="review-container hidden">
+            <h2>Confirma tus datos</h2>
+            <p>Por favor, verifica que la siguiente información sea correcta antes de suscribirte:</p>
+
+            <div class="data-review-box">
+                <div class="review-item">
+                    <strong>📧 Email:</strong> 
+                    <span id="reviewEmail"></span>
+                </div>
+                <div class="review-item">
+                    <strong>👤 Nombre:</strong> 
+                    <span id="reviewName"></span>
+                </div>
+                <div class="review-item">
+                    <strong>✅ Intereses:</strong> 
+                    <ul id="reviewInterests" class="review-list">
+                        </ul>
+                </div>
+            </div>
+
+            <button type="button" id="confirmDataButton" class="submit-button confirm-button">Confirmar y Suscribirme</button>
+            <button type="button" id="editDataButton" class="edit-button">Editar Datos</button>
         </div>
+        </form>
+</div>
         </form> 
 </div>
     </div>
